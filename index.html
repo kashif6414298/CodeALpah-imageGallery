@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My CodeAlpha Internship Project</h1>
+        <p>A simple, responsive image gallery with a lightbox view.</p>
+    </header>
+
+    <main class="gallery-wrapper">
+        <div class="image-card" onclick="openFullView(0)">
+            <img src="https://picsum.photos/id/101/400/300" alt="Mountain landscape">
+        </div>
+        <div class="image-card" onclick="openFullView(1)">
+            <img src="https://picsum.photos/id/102/400/300" alt="Forest path">
+        </div>
+        <div class="image-card" onclick="openFullView(2)">
+            <img src="https://picsum.photos/id/103/400/300" alt="Ocean waves">
+        </div>
+        <div class="image-card" onclick="openFullView(3)">
+            <img src="https://picsum.photos/id/104/400/300" alt="City skyline">
+        </div>
+    </main>
+
+    <div id="popup-window" class="lightbox-overlay">
+        <span class="close-btn" onclick="closeFullView()">&times;</span>
+        
+        <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094; Previous</button>
+        
+        <div class="content-container">
+            <img id="big-display-image" src="" alt="Full size view">
+        </div>
+
+        <button class="nav-btn next" onclick="moveSlide(1)">Next &#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

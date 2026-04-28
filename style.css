@@ -1,0 +1,71 @@
+/* General Page Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Creating a neat grid for the images */
+.gallery-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Styling the "Cards" that hold images */
+.image-card img {
+    width: 280px;
+    height: 200px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    /* Smooth transition for the hover effect */
+    transition: all 0.4s ease; 
+}
+
+/* HOVER EFFECT: This makes the project feel "alive" */
+.image-card img:hover {
+    transform: translateY(-10px); /* Moves up slightly */
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+    filter: saturate(1.2); /* Makes colors pop */
+}
+
+/* LIGHTBOX (THE POP-UP) STYLE */
+.lightbox-overlay {
+    display: none; /* Stay hidden until an image is clicked */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container img {
+    max-width: 85%;
+    max-height: 80vh;
+    border-radius: 4px;
+}
+
+/* BUTTONS STYLE */
+.nav-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50px;
+    margin: 0 20px;
+}
+
+.nav-btn:hover {
+    background-color: white;
+    color: black;
+}
